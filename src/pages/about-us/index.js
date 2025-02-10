@@ -1,6 +1,6 @@
 
 
-import Layout from "@/layout/layout";
+import Layout from "@/layout/layout"; 
 
 import Loader from "@/components/ui/loader";
 import Hero from "@/components/press/hero";
