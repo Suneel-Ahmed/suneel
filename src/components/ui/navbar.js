@@ -21,18 +21,7 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hidden, setHidden] = useState(false);
   const router = useRouter();
-  const state = useSelector(state => state.lang)
-  
-  // Change Language
-  const handleLang = ()=>{
-    if(state.value === "Eng"){
-      dispatch(lang("Spa"))
-      
-    }else{
-      dispatch(lang("Eng"))
-
-    }
-  }
+ 
 
 
 
@@ -127,12 +116,7 @@ export default function Navbar() {
            SUNEEL
           </a>
           
-          <button
-            className=" ms-auto  me-[30px]  lg:hidden"
-            onClick={handleLang}
-          >
-            {state.value}
-          </button>
+        
 
           <button
             className="lg:hidden"
@@ -151,8 +135,7 @@ export default function Navbar() {
 
 
           <ul className="hidden lg:flex gap-[50px]">
-            {
-              state.value === "Eng" ? <>
+           
               {navbarData.links.map((link, index) => (
                 <li key={link.name}>
                   <a onClick={(e) => {
@@ -161,18 +144,7 @@ export default function Navbar() {
                   }}   href={link.path}>{link.name}</a>
                 </li>
               ))}
-              </>
-              :
-              <>
-              {spanishNavData.links.map((link, index) => (
-                <li key={link.name}>
-                  <a onClick={(e) => {
-                    handleDirectNavigation(link.path); // Handle navigation
-                  }}   href={link.path}>{link.name}</a>
-                </li>
-              ))}
-              </>
-            }
+             
           </ul>
         </div>
 
