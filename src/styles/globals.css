@@ -192,7 +192,7 @@ body {
 
 /* Other Styles Start */
 .menu-item {
-	-webkit-text-stroke: 3px #DBE600;
+	-webkit-text-stroke: 3px #efdcf9;
 	text-decoration: none;
 	transition: all 0.3s ease;
 	color: transparent;
@@ -200,7 +200,7 @@ body {
 }
 
 .menu-item:hover {
-	-webkit-text-fill-color: #DBE600;
+	-webkit-text-fill-color: #efdcf9;
 }
 
 .menu-item-fill-transparent {
@@ -208,7 +208,7 @@ body {
 }
 
 .menu-item-fill-green {
-	-webkit-text-fill-color: #DBE600;
+	-webkit-text-fill-color: #efdcf9;
 }
 
 .menu-item.clicked {
@@ -219,8 +219,8 @@ body {
 
 .text-outlined {
 	color: #00011c;
-	text-shadow: 0px 0px 2px #DBE600, 0px 0px 2px #DBE600, 0px 0px 2px #DBE600,
-		0px 0px 2px #DBE600, 0px 0px 2px #DBE600, 0px 0px 2px #DBE600, 0px 0px 2px #DBE600;
+	text-shadow: 0px 0px 2px #efdcf9, 0px 0px 2px #efdcf9, 0px 0px 2px #efdcf9,
+		0px 0px 2px #efdcf9, 0px 0px 2px #efdcf9, 0px 0px 2px #efdcf9, 0px 0px 2px #efdcf9;
 }
 
 .league-spartan {
@@ -244,7 +244,7 @@ body {
 	align-items: center !important;
 	border-radius: 50%;
 	color: #fff !important;
-	background-color: #DBE600 !important;
+	background-color: #efdcf9 !important;
 }
 .swiper-button-next {
 	width: 56px !important;
@@ -254,7 +254,7 @@ body {
 	align-items: center !important;
 	border-radius: 50%;
 	color: #fff !important;
-	background-color: #DBE600 !important;
+	background-color: #efdcf9 !important;
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -272,7 +272,7 @@ body {
 	z-index: -1;
 	background: linear-gradient(
 		to bottom right,
-		#DBE600,
+		#efdcf9,
 		rgba(163, 89, 255, 0)
 	);
 }
@@ -302,7 +302,7 @@ body {
 }
 
 .gradient-text-purple {
-	background-image: linear-gradient(to bottom, #ffffff, #dbe60093);
+	background-image: linear-gradient(to bottom, #ffffff, #c5c2c7);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -312,14 +312,14 @@ body {
 	background-image: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 1) 20%,
-		#dbe60093
+		#c5c2c7
 	);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 }
 .gradient-text-golden {
-	background-image: linear-gradient(to bottom, #ffffff, #DBE600);
+	background-image: linear-gradient(to bottom, #ffffff, #efdcf9);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -360,7 +360,7 @@ body {
 		height: 599px;
 				background: radial-gradient(
 			50% 50% at 50% 50%,
-			rgba(219, 230, 0, 0.35) 0%,
+			rgba(217, 218, 217, 0.35) 0%,
 			rgba(155, 54, 255, 0) 100%
 		);
 		filter: blur(300px);
@@ -373,7 +373,7 @@ body {
 		height: 499px;
 				background: radial-gradient(
 			50% 50% at 50% 50%,
-			rgba(219, 230, 0, 0.35) 0%,
+			rgba(217, 218, 217, 0.35) 0%,
 			rgba(155, 54, 255, 0) 100%
 		);
 		filter: blur(300px);

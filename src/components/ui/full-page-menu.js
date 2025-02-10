@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useRef, useEffect } from 'react';
 
-import Image from 'next/image';
+
 
 import navbarData from '@/constants/navbar-data';
 
@@ -79,9 +79,9 @@ export default function FullPageMenu({ isOpen, closeMenu }) {
 		>
 			<nav className='navbar bg-transparent absolute top-0 left-0 right-0 px-[8vw] py-[4vh] flex place-items-center z-50 lg:z-40'>
 				<div className='flex-1'>
-					<a href='/'>
-					<Image alt = "" className = "h-[130px] lg:h-[clamp(30px,6vw,130px)] w-auto"  src = '/images/logo/logo.png' width = {500} height = {500} />
-					</a>
+				<a href="/" className="font-hvdTrialGraphit" >
+           SUNEEL
+          </a>
 				</div>
 				<button
 					ref={menuButtonRef}

@@ -16,7 +16,7 @@ export default function OurNetwork({ networkStats }) {
 			className='w-full h-fit  px-[8vw] lg:px-[clamp(40px,4vw,75px)] py-[4vh] relative flex flex-col lg:flex-row gap-[5vh] lg:gap-0'
 		>
 			<div className='w-[35%] min-w-fit relative'>
-				<p className='text-[#DCE600] text-[clamp(28px,2.2vw,42px)] text-left font-hvdTrialGraphit font-normal leading-[125%] uppercase '>
+				<p className='text-[#efdcf9] text-[clamp(28px,2.2vw,42px)] text-left font-hvdTrialGraphit font-normal leading-[125%] uppercase '>
 				 {state.value === "Eng" ? "Our Network" : "Nuestra Red" }	
 				</p>
 				<ul className='w-[15%] min-w-fit mt-[0.5vw] flex place-content-start place-items-start gap-4'>

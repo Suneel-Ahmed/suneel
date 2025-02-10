@@ -125,9 +125,9 @@ export default function OurCustomers({customerReview , alt = false }) {
 		>
 			<div   className='w-full  h-full absolute inset-0'>
 				<div className='w-full  h-full relative'>
-					<div className='w-[75vw] lg:w-[55vw] aspect-square absolute top-[80%] left-[-10%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(219,230,0,0.35)_0%,rgba(181,24,131,0)_100%)] blur-[125px]' />
-					<div className='w-[75vw] lg:w-[55vw] aspect-square absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(219,230,0,0.15)_0%,rgba(181,24,131,0)_100%)] blur-[125px]' />
-					<div className='w-[75vw] lg:w-[55vw] aspect-square absolute top-0 right-[-10%] translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(219,230,0,0.35)_0%,rgba(181,24,131,0)_100%)] blur-[125px]' />
+					<div className='w-[75vw] lg:w-[55vw] aspect-square absolute top-[80%] left-[-10%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(239,220,249,0.35)_0%,rgba(239,220,249,0)_100%)] bg-opacity-100 blur-[125px]' />
+					<div className='w-[75vw] lg:w-[55vw] aspect-square absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(239, 220, 249,0.15)_0%,rgba(239, 220, 249,0)_100%)] blur-[125px]' />
+					<div className='w-[75vw] lg:w-[55vw] aspect-square absolute top-0 right-[-10%] translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,rgba(239, 220, 249,0.35)_0%,rgba(239, 220, 249,0)_100%)] blur-[125px]' />
 				</div>
 			</div>
 			<p

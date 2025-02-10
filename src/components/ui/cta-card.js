@@ -21,10 +21,10 @@ export default function CTACard({ number, title, text, image, link, alt }) {
 				<p className='text-outlined text-[clamp(60px,8vw,140px)]  text-left font-hvdTrialGraphit font-bold leading-[100%]'>
 					{number.toString().padStart(2, '0')}
 				</p>
-				<p className='text-[#DCE600] text-[clamp(40px,3.75vw,80px)] text-left font-leagueSpartan font-semibold leading-[100%] uppercase'>
+				<p className='text-[#efdcf9] text-[clamp(40px,3.75vw,80px)] text-left font-leagueSpartan font-semibold leading-[100%] uppercase'>
 					{title}
 				</p>
-				<p className='text-[#FFFFFF] text-[clamp(14px,1.2vw,20px)] text-left max-lg:leading-[115%] font-hvdTrialGraphit font-light leading-[125%] pr-8'>
+				<p className='text-[#efdcf9cb] text-[clamp(14px,1.2vw,20px)] text-left max-lg:leading-[115%] font-hvdTrialGraphit font-light leading-[125%] pr-8'>
 					{text}
 				</p>
 	

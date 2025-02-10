@@ -42,7 +42,7 @@ export default function IndustryLeaders({ industryLeaders }) {
 			id='industry-leaders'
 			className='w-full h-fit relative'
 		>
-			<p className=' text-[clamp(28px,4.3vw,82px)] text-center font-leagueSpartan font-semibold leading-[125%] text-[#DCE600]'>
+			<p className=' text-[clamp(28px,4.3vw,82px)] text-center font-leagueSpartan font-semibold leading-[125%] text-[#efdcf9]'>
 			 {state.value === "Eng" ? "TRUSTED BY INDUSTRY LEADERS" : "CON LA CONFIANZA DE LOS LÍDERES DE LA INDUSTRIA"}	
 			</p>
 			<ul ref={listRef} className='w-fit p-[4vw] flex gap-[4vw]'>

@@ -32,7 +32,7 @@ export default function CTA({Cta_Data}) {
 		tl.to(heading.current, { autoAlpha: 0 });
 	
 		tl.set(Array.from(numbers[0].children)[0], {
-			color: '#DBE600',
+			color: '#efdcf9',
 			fontWeight: 500,
 			scale: 1.25,
 		}).set(Array.from(numbers[0].children)[1], {
@@ -60,7 +60,7 @@ export default function CTA({Cta_Data}) {
 				duration: 0.75, // Reduced image transition duration
 			}, '-=0.75')
 			.to(Array.from(numbers[i].children)[0], {
-				color: '#DBE600',
+				color: '#efdcf9',
 				fontWeight: 400,
 				scale: 1,
 			}, '<')
@@ -68,7 +68,7 @@ export default function CTA({Cta_Data}) {
 				autoAlpha: 0,
 			}, '<')
 			.to(Array.from(numbers[i + 1].children)[0], {
-				color: '#DBE600',
+				color: '#efdcf9',
 				fontWeight: 500,
 				scale: 1.25,
 			}, '<')
@@ -94,7 +94,7 @@ export default function CTA({Cta_Data}) {
 			className='w-full h-screen pl-[16vw] lg:pl-[10vw] pr-[8vw] lg:pr-[clamp(40px,4vw,75px)] relative'
 		>
 			<div ref={heading} className='absolute max-lg:hidden top-[100px] ' >
-				<h1 className='text-[#DCE600]  relative font-inter font-semibold text-[clamp(40px,5.25vw,98px)]  z-20 ' >
+				<h1 className='text-[#efdcf9]  relative font-inter font-semibold text-[clamp(40px,5.25vw,98px)]  z-20 ' >
 					{state.value === "Eng" ? "HOW WE HELP" : "CÓMO AYUDAMOS" }</h1>
 			</div>
 			<div className='w-full h-full absolute inset-0'>
@@ -119,7 +119,7 @@ export default function CTA({Cta_Data}) {
 								>
 									<path
 										d='M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM3 3.5H30V2.5H3V3.5Z'
-										fill='#DBE600'
+										fill='#efdcf9'
 									/>
 								</svg>
 							</li>

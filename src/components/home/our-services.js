@@ -15,7 +15,7 @@ const state = useSelector(state => state.lang)
       >
         <p
           className={
-            "text-[#DCE600] text-[clamp(48px,6vw,110px)] text-center font-leagueSpartan font-semibold leading-[100%] uppercase "
+            "text-[#efdcf9] text-[clamp(48px,6vw,110px)] text-center font-leagueSpartan font-semibold leading-[100%] uppercase "
           }
         >
           {state.value === "Eng" ? "Services" : "Servicios"}

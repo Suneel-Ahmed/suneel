@@ -2,20 +2,19 @@ import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import Image from "next/image.js";
 import Button from "@/components/ui/button";
 import FullPageMenu from "@/components/ui/full-page-menu";
 import navbarData from "@/constants/navbar-data";
-import {spanishNavData} from "@/constants/navbar-data";
+
 import ScrollToPlugin from "../../../public/js/ScrollToPlugin.min.js";
 import { useRouter } from "next/router";
-import { useSelector , useDispatch } from "react-redux";
-import { lang } from "@/redux/Slices/langSlice.js";
+
+
 
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Navbar() {
-  const dispatch = useDispatch()
+ 
   const containerRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);

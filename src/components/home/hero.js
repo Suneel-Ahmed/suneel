@@ -78,7 +78,7 @@ export default function Hero({heroData}) {
 				<p className='text-[#efdcf9]  text-[clamp(40px,6vw,120px)] text-center font-inter font-extrabold leading-[120%]'>
 			       Web Development
 				</p>
-				<p className='text-[#FFFFFF]  max-md:w-[80%] w-[50%] text-[clamp(12px,1.2vw,23px)] text-center font-hvdTrialGraphit font-normal leading-[150%]'>
+				<p className='text-[#efdcf9]  max-md:w-[80%] w-[50%] text-[clamp(12px,1.2vw,23px)] text-center font-hvdTrialGraphit font-normal leading-[150%]'>
 
 				Here, you'll discover custom tech solutions. I focus on software development and new services. These will elevate your project to new heights.
 				
