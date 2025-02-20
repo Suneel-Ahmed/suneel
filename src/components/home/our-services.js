@@ -32,11 +32,13 @@ export default function OurServices({services_Data}) {
                   <span className="w-[clamp(0px,35vw,250px)] lg:w-[clamp(0px,20vw,310px)] aspect-video relative block rounded-3xl overflow-hidden">
                   
                       <Image
-                        src={`/images/Shape/shape.png`}
+                        src={service?.attributes?.coverimage}
                         alt={"services Image"}
-                        fill
-                        sizes="22vw"
-                        className="object-center"
+                        // fill
+                        width={500}
+                        height={500}
+                        // sizes="22vw"
+                        className="object-center aspect-square w-[150px] mx-auto mt-5 h-auto "
                       />
                    
                   </span>
