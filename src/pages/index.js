@@ -4,7 +4,7 @@ import Loader from '@/components/ui/loader';
 import Hero from '@/components/home/hero';
 import IndustryLeaders from '@/components/home/industry-leaders';
 import OurServices from '@/components/home/our-services';
-import OurNetwork from '@/components/home/our-network';
+
 import OurCustomers from '@/components/home/our-customers';
 import CTA from '@/components/home/cta';
 import BookCall from '@/components/home/book-call';
@@ -81,17 +81,6 @@ export default function Home() {
 		);
 	}
 	
-	const network_Data = [
-		{
-			id : 1
-		},
-		{
-			id : 2
-		},
-		{
-			id : 3
-		},
-	]
 
 
 	return (
@@ -100,9 +89,9 @@ export default function Home() {
 			<OurCustomers customerReview ={customer}  />
 			<OurServices  services_Data = {services_Data} />
 			<IndustryLeaders industryLeaders={industryLeaderData} />
-			{/* // need change here  */}
+			
 			<CTA Cta_Data = {Cta_Data} />
-			<OurNetwork networkStats={network_Data} />
+			
 			<BookCall />
 		</Layout>
 	);

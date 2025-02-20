@@ -106,11 +106,11 @@ export default function CTA({Cta_Data}) {
 					>
 						{Cta_Data.map((display, idx) => (
 							<li
-								key={ display?.attributes?.Title_English + idx }
+								key={ display?.Title_English + idx }
 								className='flex place-content-center place-items-center gap-[clamp(5px,0.5vw,10px)]'
 							>
 								<p className='text-[#767676] text-[clamp(14px,1.1vw,20px)] text-left font-hvdTrialGraphit font-normal leading-[125%]'>
-									{idx + 1}
+									{idx + 1} 
 								</p>
 								<svg
 									viewBox='0 0 30 6'
@@ -137,14 +137,14 @@ export default function CTA({Cta_Data}) {
 			
 					{Cta_Data.map((display, idx) => (
 					<li
-						key={ display?.attributes?.Title_English + idx}
+						key={ display?.Title_English + idx}
 						className={`w-full h-full absolute ${idx > 0 ? 'invisible' : 'visible'
 							}`}
 					>
 						<CTACard
 							number={idx + 1}
-							title={  display?.attributes?.Title_English }
-							text={ display?.attributes?.text_English  }
+							title={  display?.Title_English }
+							text={ display?.text_English  }
 							image={`/images/Shape/shape.png}`}
 							link={display.link}
 							alt={idx % 2 !== 0 ? true : false}
