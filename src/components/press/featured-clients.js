@@ -4,14 +4,14 @@ import { useGSAP } from '@gsap/react';
 
 import IndustryLeader from '@/components/ui/industry-leader';
 
-import { useSelector } from 'react-redux';
+
 
 
 
 export default function FeaturedClients({ featuredClients }) {
 	const containerRef = useRef(null);
 	const listRef = useRef(null);
-	const state = useSelector(state => state.lang)
+
 	useGSAP(
 		() => {
 			gsap
@@ -42,7 +42,7 @@ export default function FeaturedClients({ featuredClients }) {
 			className='w-full h-fit relative'
 		>
 			<p className='text-[#DCE600] text-[clamp(28px,4.3vw,82px)] text-center font-leagueSpartan font-semibold leading-[125%] uppercase '>
-			 {state.value === "Eng" ? "We've Featured Our Clients in:" : "Hemos destacado a nuestros clientes en"}	
+			 {"We've Featured Our Clients in:"}	
 			</p>
 			<ul ref={listRef} className='w-fit p-[4vw] flex gap-[4vw]'>
 				{featuredClients?.map((src, idx) => (

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useSelector } from "react-redux";
+
 
 
 
@@ -11,7 +11,7 @@ export default function Marketing({marketing}) {
   const imagesRef = useRef(null);
   const textsRef = useRef(null);
   const numbersRef = useRef(null);
-  const state = useSelector(state => state.lang)
+
 
   useGSAP(() => {
     const images = Array.from(imagesRef.current.children);
@@ -111,12 +111,11 @@ export default function Marketing({marketing}) {
     >
       <div className="flex flex-col lg:flex-row place-content-between place-items-center gap-[10px] lg:gap-0">
         <p className="relative text-[#DCE600] text-[clamp(30px,3.75vw,70px)] text-center lg:text-left font-inter font-extrabold leading-[125%] uppercase ">
-          {state.value === "Eng" ? "Marketing that gets results" : "Marketing que obtiene resultados"} 
+          { "Marketing that gets results"} 
         </p>
         <p className="w-full lg:max-w-[clamp(0px,37.5vw,715px)] relative text-[#FFFFFF] text-[clamp(14px,1.55vw,29px)] text-center lg:text-left font-poppins font-normal leading-[150%]">
           {
-            state.value === "Eng" ? "Boost your online presence with higher search rankings and more buyers to your site!" : "¡Impulse su presencia en línea con clasificaciones de búsqueda más altas y más compradores en su sitio!"
-          }
+            "Boost your online presence with higher search rankings and more buyers to your site!"          }
           
         </p>
       </div>
@@ -125,8 +124,7 @@ export default function Marketing({marketing}) {
           ref={imagesRef}
           className="h-[40vw] lg:h-[32vw] aspect-[9/10] relative"
         >
-          {
-            state.value === "Eng" ? <>
+          
           {marketing.map((item, idx) => (
             <span
               key={idx}
@@ -148,40 +146,13 @@ export default function Marketing({marketing}) {
               />
             </span>
           ))}  
-            </>
-            :
-            <>
-            {marketing.map((item, idx) => (
-            <span
-              key={idx}
-              className={`w-full h-full absolute inset-0 rounded-[11px] lg:rounded-[21px] overflow-hidden ${
-                idx === marketing.length - 1 ? "scale-125" : 'bg-[#D9D9D9]'
-              }`}
-              style={{
-                rotate: `-${(idx + 1) * 3}deg`,
-                translate: `0 ${idx === 0 ? "" : "-150vh"}`,
-              }}
-            >
-              <Image
-                src={`https://api.programantum.com${item?.attributes?.image?.data?.attributes?.url}`}
-                alt={"marketing image"}
-                fill
-                sizes='100vw'
-                priority
-                className={"object-cover object-center bg-[#D9D9D9]"}
-              />
-            </span>
-          ))}
             
-            </>
-          }
           
         </div>
         <div className="w-full lg:w-auto lg:h-full relative flex flex-grow flex-col place-content-end">
          
           <div ref={textsRef}>
-            {
-              state.value === "Eng" ? <>
+         
             {marketing.map((item, idx) => (
               <div
                 key={item.title + idx}
@@ -197,27 +168,7 @@ export default function Marketing({marketing}) {
                 </p>
               </div>
             ))}  
-              </>
-              :
-              <>
-              {marketing.map((item, idx) => (
-              <div
-                key={item.title + idx}
-                className={`pt-[4vw] absolute inset-0 flex flex-col gap-[30px] ${
-                  idx === 0 ? "" : "invisible"
-                }`}
-              >
-                <p className="relative text-[#DCE600] text-[clamp(30px,3.75vw,70px)] text-center lg:text-left font-inter font-extrabold leading-[125%] uppercase ">
-                {item?.attributes?.title_Spanish}
-
-                </p>
-                <p className="w-full max-w-none lg:max-w-[clamp(0px,45vw,850px)] relative text-[#FFFFFF] text-[clamp(14px,1.55vw,29px)] text-center lg:text-left font-poppins font-normal leading-[150%]">
-                {item.attributes?.text_Spanish}
-                </p>
-              </div>
-            ))}
-              </>
-            }
+            
             
           </div>
      
@@ -228,8 +179,7 @@ export default function Marketing({marketing}) {
               ref={numbersRef}
               className="absolute top-1/4 lg:top-1/2 left-0 -translate-y-1/2 flex flex-col place-content-between place-items-start gap-[clamp(10px,1vw,20px)]"
             >
-              {
-                state.value === "Eng" ? <>
+            
               {marketing.map((market, idx) => (
                 <li
                   key={market?.attributes?.text_English + idx}
@@ -259,39 +209,7 @@ export default function Marketing({marketing}) {
                 </li>
               ))}  
                 
-                </>
-                :
-                <>
-                {marketing.map((market, idx) => (
-                <li
-                  key={market?.attributes?.text_English + idx}
-                  className="flex place-content-center place-items-center gap-[clamp(5px,0.5vw,10px)]"
-                >
-                  <p
-                    className={`${
-                      idx === 0 ? "text-[#DCE600]" : "text-[#767676]"
-                    } text-[clamp(14px,1.1vw,20px)] text-left font-hvdTrialGraphit ${
-                      idx === 0 ? "font-medium" : "font-normal"
-                    } leading-[125%]`}
-                  >
-                    {idx + 1}
-                  </p>
-                  <svg
-                    viewBox="0 0 30 6"
-                    fill="none"
-                    className={`w-[clamp(15px,1.75vw,35px)] ${
-                      idx === 0 ? "" : "invisible"
-                    }`}
-                  >
-                    <path
-                      d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM3 3.5H30V2.5H3V3.5Z"
-                      fill="#DCE600"
-                    />
-                  </svg>
-                </li>
-              ))}
-                </>
-              }
+              
               
             </ul>
           </div>

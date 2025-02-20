@@ -5,7 +5,7 @@ export default {
 			spanishName : "Navegación",
 			links: [
 				{
-					name: 'Programantum Agency',
+					name: 'Home',
 					spanishName : "Programantum Agency",
 					path: '/',
 				},
@@ -47,12 +47,12 @@ export default {
 			spanishName : "Contacto",
 			links: [
 				{
-					name: 'admin@programantum.com',
+					name: 'sunailahmad7@gmail.com',
 					spanishName : "admin@programantum.com",
 					path: '/',
 				},
 				{
-					name: '+1 (562) 3759740',
+					name: '+92 (349) 5373451',
 					spanishName : "+1 (562) 3759740",
 					path: '/',
 				},
