@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useSelector } from 'react-redux';
+
 export default function NetworkStat({ text, value, symbol }) {
 
-const state = useSelector(state => state.lang)
+
 
 	const containerRef = useRef(null);
 	const [animatedValue, setAnimatedValue] = useState(0);
@@ -41,7 +41,7 @@ const state = useSelector(state => state.lang)
 			<p className='py-[clamp(0px,1.5vw,30px)] text-[#efdcf9] text-[clamp(0px,5vw,90px)] text-left font-leagueSpartan font-semibold leading-[100%] '>
 				{animatedValue}
 			</p>
-			<p className={`text-[#efdcf9] ${state.value === "Eng" ? "text-[clamp(10px,1.45vw,27px)]" : "text-[clamp(10px,1.45vw,20px)]"}  text-left font-hvdTrialGraphit font-normal leading-[125%]`}>
+			<p className={`text-[#efdcf9]  text-[clamp(10px,1.45vw,27px)]  text-left font-hvdTrialGraphit font-normal leading-[125%]`}>
 				{text}
 			</p>
 		</span>

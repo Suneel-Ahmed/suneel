@@ -8,15 +8,18 @@ import OurNetwork from '@/components/home/our-network';
 import OurCustomers from '@/components/home/our-customers';
 import CTA from '@/components/home/cta';
 import BookCall from '@/components/home/book-call';
-import { customer } from '@/constants/customer';
 import useAssetsLoader from '@/hooks/useAssetsLoader';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
 
+
+// import Data
 import industryLeaderData from '@/constants/industry-leader-data';
 import footerData from '@/constants/footer-data';
+import { customer } from '@/constants/customer';
+import { services_Data } from '@/constants/ServicesData';
+import { Cta_Data } from '@/constants/CtaData';
 
-
-export default function Home({heroData , customerReview , network_Data , services_Data , Cta_Data}) {
+export default function Home() {
 	useDocumentTitle('Home ');
 	const { areImagesLoaded, areFontsLoaded, areVideosLoaded } = useAssetsLoader(
 		[
@@ -77,13 +80,27 @@ export default function Home({heroData , customerReview , network_Data , service
 			</div>
 		);
 	}
+	
+	const network_Data = [
+		{
+			id : 1
+		},
+		{
+			id : 2
+		},
+		{
+			id : 3
+		},
+	]
+
 
 	return (
 		<Layout>
-			<Hero heroData = {heroData} />
+			<Hero  />
 			<OurCustomers customerReview ={customer}  />
 			<OurServices  services_Data = {services_Data} />
 			<IndustryLeaders industryLeaders={industryLeaderData} />
+			{/* // need change here  */}
 			<CTA Cta_Data = {Cta_Data} />
 			<OurNetwork networkStats={network_Data} />
 			<BookCall />
@@ -93,29 +110,3 @@ export default function Home({heroData , customerReview , network_Data , service
 
 
 
-  export async function getServerSideProps() {
-	// Define the URLs for the APIs you want to fetch
-	const urls = [
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/home-banner?populate=*`,
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/customer-reviews?populate=*`,
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/data-networks?populate=*`,
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/services?populate=*`,
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/ctas?populate=*`,
-	];
-  
-	// Use Promise.all to fetch all APIs concurrently
-	const responses = await Promise.all(urls.map(url => fetch(url)));
-	
-	// Convert the responses to JSON
-	const data = await Promise.all(responses.map(res => res.json()));
-	
-	return {
-	  props: {
-		heroData: data[0], 
-		customerReview: data[1]?.data, 
-		network_Data: data[2].data,
-		services_Data: data[3].data,
-		Cta_Data: data[4].data,
-	  },
-	};
-  }

@@ -3,13 +3,13 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import IndustryLeader from '@/components/ui/industry-leader';
 
-import { useSelector } from 'react-redux';
+
 
 
 
 export default function IndustryLeaders({ industryLeaders }) {
 
-	const state = useSelector(state => state.lang)
+	
 	const containerRef = useRef(null);
 	const listRef = useRef(null);
 
@@ -43,7 +43,7 @@ export default function IndustryLeaders({ industryLeaders }) {
 			className='w-full h-fit relative'
 		>
 			<p className=' text-[clamp(28px,4.3vw,82px)] text-center font-leagueSpartan font-semibold leading-[125%] text-[#efdcf9]'>
-			 {state.value === "Eng" ? "TRUSTED BY INDUSTRY LEADERS" : "CON LA CONFIANZA DE LOS LÍDERES DE LA INDUSTRIA"}	
+			 { "TRUSTED BY INDUSTRY LEADERS"}	
 			</p>
 			<ul ref={listRef} className='w-fit p-[4vw] flex gap-[4vw]'>
 				{industryLeaders.map((src, idx) => (

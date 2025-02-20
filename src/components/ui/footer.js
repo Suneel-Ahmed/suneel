@@ -10,10 +10,10 @@ import {
 
 import footerData from '@/constants/footer-data';
 import socialData from '@/constants/social-data';
-import { useSelector } from 'react-redux';
+
 
 export default function Footer() {
-	const state = useSelector(state => state.lang)
+
 
 	return (
 		<footer className='w-full min-h-[50vh] max-sm:pb-[40px] lg:h-[75vh] px-[8vw] lg:px-[clamp(40px,4vw,75px)] relative flex flex-wrap place-content-end place-items-center'>
@@ -58,12 +58,12 @@ export default function Footer() {
 						className='flex flex-col gap-[clamp(25px,3.5vw,70px)]'
 					>
 						<p className='text-[#FFFFFF] text-[clamp(18px,2vw,38px)] text-left font-hvdTrialGraphit font-normal leading-[100%]'>
-						 	{ state.value === "Eng" ?  list.name : list.spanishName }
+						 	{  list.name  }
 						</p>
 						<ul className='flex flex-col gap-[clamp(20px,1.75vw,35px)] text-[#FFFFFF] text-[clamp(12px,1.45vw,28px)] text-left font-hvdTrialGraphit font-thin leading-[100%]'>
 							{list.links.map((link) => (
 								<li key={link.name}>
-									<a href={link.path}>{ state.value === "Eng" ?  link.name : link.spanishName }</a>
+									<a href={link.path}>{   link.name  }</a>
 								</li>
 							))}
 						</ul>

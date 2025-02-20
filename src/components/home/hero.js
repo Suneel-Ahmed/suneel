@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useSelector } from 'react-redux';
 
 
-export default function Hero({heroData}) {
+
+export default function Hero() {
 	const containerRef = useRef(null);
-	const state = useSelector(state => state.lang)
+
 	const textRef = useRef(null);
 	const symbolsRef = useRef(null);
 

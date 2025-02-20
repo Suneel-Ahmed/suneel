@@ -2,11 +2,11 @@ import { FacebookIcon2, XIcon2, InstagramIcon2 } from '@/components/ui/socials';
 import NetworkStat from '@/components/ui/network-stat';
 
 import socialData from '@/constants/social-data';
-import { useSelector } from 'react-redux';
+
 
 export default function OurNetwork({ networkStats }) {
 
-	const state = useSelector(state => state.lang);
+	
 
 
 
@@ -17,7 +17,7 @@ export default function OurNetwork({ networkStats }) {
 		>
 			<div className='w-[35%] min-w-fit relative'>
 				<p className='text-[#efdcf9] text-[clamp(28px,2.2vw,42px)] text-left font-hvdTrialGraphit font-normal leading-[125%] uppercase '>
-				 {state.value === "Eng" ? "Our Network" : "Nuestra Red" }	
+				 {"Our Network" }	
 				</p>
 				<ul className='w-[15%] min-w-fit mt-[0.5vw] flex place-content-start place-items-start gap-4'>
 					{socialData
@@ -52,7 +52,7 @@ export default function OurNetwork({ networkStats }) {
 				</ul>
 			</div>
 			<ul className='w-full lg:w-[65%] relative flex place-content-between place-items-start'>
-			{state.value === "Eng" ? <>
+			
 				{networkStats?.map((stat, idx) => (
 					<li key={stat + idx}>
 						<NetworkStat
@@ -62,21 +62,7 @@ export default function OurNetwork({ networkStats }) {
 						/>
 					</li>
 				))}
-			</>
-		:
-		<>
-			{networkStats?.map((stat, idx) => (
-					<li key={stat + idx}>
-						<NetworkStat
-							text={stat?.attributes?.text_Spanish}
-							value={stat?.attributes?.value}
-							symbol={stat?.attributes?.symbol}
-						/>
-					</li>
-				))}
-		</>	
 		
-		}
 			
 			</ul>
 		</section>

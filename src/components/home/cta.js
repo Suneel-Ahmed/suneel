@@ -1,14 +1,14 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useSelector } from 'react-redux';
+
 import CTACard from '@/components/ui/cta-card';
 
 
 export default function CTA({Cta_Data}) {
 	
 
-	const state = useSelector(state => state.lang)
+	
 	const containerRef = useRef(null);
 	const ctaCardListRef = useRef(null);
 	const heading = useRef(null);
@@ -95,7 +95,7 @@ export default function CTA({Cta_Data}) {
 		>
 			<div ref={heading} className='absolute max-lg:hidden top-[100px] ' >
 				<h1 className='text-[#efdcf9]  relative font-inter font-semibold text-[clamp(40px,5.25vw,98px)]  z-20 ' >
-					{state.value === "Eng" ? "HOW WE HELP" : "CÓMO AYUDAMOS" }</h1>
+					{ "HOW WE HELP" }</h1>
 			</div>
 			<div className='w-full h-full absolute inset-0'>
 				<div className='w-full h-full relative'>
@@ -143,9 +143,9 @@ export default function CTA({Cta_Data}) {
 					>
 						<CTACard
 							number={idx + 1}
-							title={ state.value === "Eng" ?   display?.attributes?.Title_English : display?.attributes?.Title_Spanish}
-							text={ state.value === "Eng" ?   display?.attributes?.text_English : display?.attributes?.text_Spanish }
-							image={`https://api.programantum.com${display?.attributes?.image?.data?.attributes?.url}`}
+							title={  display?.attributes?.Title_English }
+							text={ display?.attributes?.text_English  }
+							image={`/images/Shape/shape.png}`}
 							link={display.link}
 							alt={idx % 2 !== 0 ? true : false}
 						/>
