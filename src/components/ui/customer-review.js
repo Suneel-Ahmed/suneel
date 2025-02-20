@@ -17,7 +17,7 @@ export default function CustomerReview({
 						fill
 						sizes='5vw'
 						unoptimized={unoptimized}
-						className='object-center'
+						className='object-center object-cover '
 						priority
 					/>
 				</span>
