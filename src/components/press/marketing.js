@@ -42,7 +42,7 @@ export default function Marketing({marketing}) {
         .to(
           numbers[i - 1].children[0],
           {
-            color: "#DCE600",
+            color: "#efdcf9",
             fontWeight: 400,
             ease: "power1.out", // Quick easing
             duration: 0.1, // Minimal duration
@@ -70,7 +70,7 @@ export default function Marketing({marketing}) {
         .to(
           numbers[i].children[0],
           {
-            color: "#DCE600",
+            color: "#efdcf9",
             fontWeight: 500,
             ease: "power1.in", // Fastest easing
             duration: 0.1, // Minimal duration
@@ -110,10 +110,10 @@ export default function Marketing({marketing}) {
       className="w-full h-screen px-[8vw] lg:px-[clamp(40px,4vw,75px)] pt-[12vh] lg:py-[4vw] relative flex flex-col place-content-start lg:place-content-center place-items-center gap-[60px] overflow-hidden"
     >
       <div className="flex flex-col lg:flex-row place-content-between place-items-center gap-[10px] lg:gap-0">
-        <p className="relative text-[#DCE600] text-[clamp(30px,3.75vw,70px)] text-center lg:text-left font-inter font-extrabold leading-[125%] uppercase ">
+        <p className="relative text-[#efdcf9] text-[clamp(30px,3.75vw,70px)] text-center lg:text-left font-inter font-extrabold leading-[125%] uppercase ">
           { "Marketing that gets results"} 
         </p>
-        <p className="w-full lg:max-w-[clamp(0px,37.5vw,715px)] relative text-[#FFFFFF] text-[clamp(14px,1.55vw,29px)] text-center lg:text-left font-poppins font-normal leading-[150%]">
+        <p className="w-full lg:max-w-[clamp(0px,37.5vw,715px)] relative text-[#ffffffdc] text-[clamp(14px,1.55vw,29px)] text-center lg:text-left font-poppins font-normal leading-[150%]">
           {
             "Boost your online presence with higher search rankings and more buyers to your site!"          }
           
@@ -160,7 +160,7 @@ export default function Marketing({marketing}) {
                   idx === 0 ? "" : "invisible"
                 }`}
               >
-                <p className="relative text-[#DCE600] text-[clamp(30px,3.75vw,70px)] text-center lg:text-left font-inter font-extrabold leading-[125%] uppercase ">
+                <p className="relative text-[#efdcf9] text-[clamp(30px,3.75vw,70px)] text-center lg:text-left font-inter font-extrabold leading-[125%] uppercase ">
                   {item?.attributes?.title_English}
                 </p>
                 <p className="w-full max-w-none lg:max-w-[clamp(0px,45vw,850px)] relative text-[#FFFFFF] text-[clamp(14px,1.55vw,29px)] text-center lg:text-left font-poppins font-normal leading-[150%]">
@@ -187,7 +187,7 @@ export default function Marketing({marketing}) {
                 >
                   <p
                     className={`${
-                      idx === 0 ? "text-[#DCE600]" : "text-[#767676]"
+                      idx === 0 ? "text-[#efdcf9]" : "text-[#767676]"
                     } text-[clamp(14px,1.1vw,20px)] text-left font-hvdTrialGraphit ${
                       idx === 0 ? "font-medium" : "font-normal"
                     } leading-[125%]`}
@@ -203,7 +203,7 @@ export default function Marketing({marketing}) {
                   >
                     <path
                       d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM3 3.5H30V2.5H3V3.5Z"
-                      fill="#DCE600"
+                      fill="#efdcf9"
                     />
                   </svg>
                 </li>
