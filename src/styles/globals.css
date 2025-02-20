@@ -110,7 +110,11 @@
 :root {
 	--background-color: #050e1d;
 }
-
+.RSPBprogressBarText {
+	color: #000 !important;
+	font-size: 17px !important;
+	margin-top: 1px;
+}
 .rcs-digital-picker-input-custom{
 	color: black;
 	padding: 2px 10px;

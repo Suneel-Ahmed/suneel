@@ -12,8 +12,8 @@ import useDocumentTitle from "@/hooks/useDocumentTitle";
 
 import industryLeaderData from '@/constants/industry-leader-data';
 
-
-export default function Press({heroData , marketing}) {
+import { marketing } from "@/constants/marketingData";
+export default function Press({heroData }) {
   useDocumentTitle("About Us");
   
   const { areImagesLoaded, areFontsLoaded, areVideosLoaded } = useAssetsLoader(
@@ -86,7 +86,6 @@ export default function Press({heroData , marketing}) {
   return (
     <Layout>
       <Hero heroData ={heroData} />
-      <FeaturedClients featuredClients={industryLeaderData} />
       <Marketing  marketing = {marketing} />
     </Layout>
   );
