@@ -22,10 +22,7 @@ export default {
 			name: 'Projects',
 			path: '/case-studies',
 		},
-		{
-			name: 'Blogs',
-			path: '/blogs',
-		},
+	
 		
 	],
 	cta: {

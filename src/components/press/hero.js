@@ -1,7 +1,7 @@
 import Button from "@/components/ui/button";
+import Image from "next/image";
 
-
-export default function Hero({heroData}) {
+export default function Hero() {
   
 
   return (
@@ -42,9 +42,14 @@ pixel-perfect designs, I can create stunning custom websites that create to your
       </div>
       <div className="w-[75vw] max-w-[500px]  lg:max-w-none lg:w-[35.5vw] aspect-[4/3] relative  overflow-hidden">
         <span className={`absolute   flex justify-center inset-0 `}>
-          <video autoPlay loop muted className="h-full">
-            <source src="/videos/about/globe.mp4" />
-          </video>
+
+          <Image
+          src={"/videos/about/1.png"}
+          width={500}
+          height={500}
+          className="h-full w-auto"
+          />
+       
         </span>
       </div>
     </section>
