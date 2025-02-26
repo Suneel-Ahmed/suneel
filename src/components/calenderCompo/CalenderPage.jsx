@@ -51,15 +51,15 @@ const CalenderPage = () => {
           <div className='w-full flex max-lg:flex-col  max-lg:items-center items-start justify-center ' >
             <div className='max-lg:w-[100%] max-lg:items-center max-lg:flex max-lg:flex-col  w-[30%] px-3 ' >
                 <div>
-                   <small className='text-[#ffffff]'> {"Programantum infoSystem"} </small>
-                   <h1 className='text-[#ffffff] text-2xl capitalize max-lg:mt-[20px] '> {"Introduction Call With Programantum infosystem"} </h1>
+                   <small className='text-[#ffffff]'> {"Suneel Ahmed Infosystem"} </small>
+                   <h1 className='text-[#ffffff] text-2xl capitalize max-lg:mt-[20px] '> {"Introduction Call With Suneel infoSystem"} </h1>
                    <div className='py-2' >
                       <p className='flex items-center text-gray' ><span><BiTime/></span> {"30 min"  }</p>
                    </div>
                    <div>
                     <h3 className='max-lg:mt-[20px]' > {"Agenda" }:</h3>
                     <ul className='list-disc ps-4 mt-3 '  >
-                      <li> {"Introduction of Programantum infoSystem"}</li>
+                      <li> {"Introduction of infoSystem"}</li>
                       <li> {"Requirement understanding" } </li>
                       <li> {"Similar work showcase" } </li>
                       <li> {"Next actions" } </li>

@@ -33,14 +33,14 @@ export default function CTACard({ number, title, text, image, link, alt }) {
         className="w-[clamp(0px,100%,600px)] lg:w-[50vw] aspect-square relative flex place-content-center place-items-center"
         style={{ order: window.innerWidth >= 1024 ? (alt ? 1 : 2) : 1 }}
       >
-        <Image
+        {/* <Image
           src={"/images/Shape/shape.png"}
           alt={"shape"}
           fill
           // sizes='22vw'
           className="object-contain object-center my-auto h-full lg:max-h-[80vh]"
           priority
-        />
+        /> */}
 
         <div className="cta-card-image  w-full h-full lg:h-[80vh] lg:flex lg:justify-center lg:items-center relative">
           <Image

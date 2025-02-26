@@ -145,7 +145,7 @@ export default function CTA({Cta_Data}) {
 							number={idx + 1}
 							title={  display?.Title_English }
 							text={ display?.text_English  }
-							image={`/images/Shape/shape.png}`}
+							image={display?.Image}
 							link={display.link}
 							alt={idx % 2 !== 0 ? true : false}
 						/>
