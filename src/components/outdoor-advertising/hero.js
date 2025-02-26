@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useSelector } from 'react-redux';
+
 
 
 
@@ -12,7 +12,7 @@ export default function Hero({outdoorAdvertisingData}) {
 	const textsRef = useRef(null);
 	const imagesRef = useRef(null);
 	const lineRef = useRef(null);
-	const state = useSelector(state => state.lang)
+
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const handleScroll = (direction) => {
@@ -156,8 +156,7 @@ export default function Hero({outdoorAdvertisingData}) {
 				ref={textsRef}
 				className='w-full lg:w-1/2 h-[55%] lg:min-h-[600px] relative'
 			>
-				{
-					state.value === "Eng" ? <>
+				 <>
 				{outdoorAdvertisingData.map((item, idx) => (
 					<div
 						key={idx}
@@ -171,29 +170,11 @@ export default function Hero({outdoorAdvertisingData}) {
 						<p className='lg:max-w-[23vw] relative text-[#FFFFFFCC] text-[clamp(14px,0.95vw,18px)] text-center lg:text-left font-inter font-normal leading-[125%]'>
 						{item?.attributes?.text_English}
 						</p>
+						<button className='px-8 py-2 border border-white rounded-3xl' >Check The Site</button>
 
 					</div>
 				))}	
-					</> :
-					<>
-					{outdoorAdvertisingData.map((item, idx) => (
-					<div
-						key={idx}
-						className={`absolute top-1/2 lg:top-0 -translate-y-1/2 lg:translate-y-0 flex flex-col place-items-center lg:place-items-start gap-[30px] ${
-							idx === 0 ? '' : 'invisible'
-						}`}
-					>
-						<p className='lg:max-w-[35vw] relative text-[#DBE600] text-[clamp(45px,4.2vw,80px)] text-center lg:text-left font-inter font-extrabold leading-[100%] uppercase '>
-						{item?.attributes?.Title_Spanish}
-						</p>
-						<p className='lg:max-w-[23vw] relative text-[#FFFFFFCC] text-[clamp(14px,0.95vw,18px)] text-center lg:text-left font-inter font-normal leading-[125%]'>
-						{item?.attributes?.text_Spanish}
-						</p>
-
-					</div>
-				))}
-					</>
-				}
+					</> 
 				
 			</div>
 			<div className='w-full lg:w-1/2 lg:h-[55%] lg:min-h-[600px] relative flex flex-col place-content-between gap-[75px]'>
