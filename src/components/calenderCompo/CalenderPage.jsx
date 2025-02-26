@@ -46,9 +46,9 @@ const CalenderPage = () => {
     
   
     return (
-      <div className='w-full flex flex-col min-h-fit gap-y-10  items-center  py-20 ' >
-        
-          <div className='w-full flex max-lg:flex-col  max-lg:items-center items-start justify-center ' >
+      <div className='w-full flex flex-col h-[80vh] gap-y-10  items-center  py-20 ' >
+       
+          {/* <div className='w-full flex max-lg:flex-col  max-lg:items-center items-start justify-center ' >
             <div className='max-lg:w-[100%] max-lg:items-center max-lg:flex max-lg:flex-col  w-[30%] px-3 ' >
                 <div>
                    <small className='text-[#ffffff]'> {"Suneel Ahmed Infosystem"} </small>
@@ -153,7 +153,7 @@ const CalenderPage = () => {
                }
               </div>
             </div>
-          </div>
+          </div> */}
       </div>
       
     )
