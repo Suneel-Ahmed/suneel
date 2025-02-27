@@ -23,14 +23,17 @@ export const services_Data = [
         Title_English: "Web Optimization"
       }
     },
+   
     {
       exclude: false,
       attributes: {
-        link: "https://example.com/service4",
-        coverimage: "/images/services/4.webp",
-        Title_English: "Social Media Marketing"
+        link: "https://example.com/service8",
+        coverimage: "/images/services/8.webp",
+        Title_English: "E-commerce"
       }
     },
+
+
     {
       exclude: false,
       attributes: {
@@ -55,12 +58,13 @@ export const services_Data = [
         Title_English: "Bookeeping"
       }
     },
+    
     {
       exclude: false,
       attributes: {
-        link: "https://example.com/service8",
-        coverimage: "/images/services/8.webp",
-        Title_English: "E-commerce"
+        link: "https://example.com/service4",
+        coverimage: "/images/services/4.webp",
+        Title_English: "Social Media Marketing"
       }
-    }
+    },
   ];
