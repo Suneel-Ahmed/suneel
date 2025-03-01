@@ -4,16 +4,17 @@ import Layout from "@/layout/layout";
 
 import Loader from "@/components/ui/loader";
 import Hero from "@/components/press/hero";
-import FeaturedClients from "@/components/press/featured-clients";
+import OurCustomers from "@/components/home/our-customers";
 import Marketing from "@/components/press/marketing";
+import { customer } from '@/constants/customer';
 
 import useAssetsLoader from "@/hooks/useAssetsLoader";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
-
+import BookCall from "@/components/home/book-call";
 import industryLeaderData from '@/constants/industry-leader-data';
 
-import { marketing } from "@/constants/marketingData";
-export default function Press({heroData }) {
+import { frontend , backend } from "@/constants/marketingData";
+export default function Press({ }) {
   useDocumentTitle("About Us");
   
   const { areImagesLoaded, areFontsLoaded, areVideosLoaded } = useAssetsLoader(
@@ -85,30 +86,11 @@ export default function Press({heroData }) {
 
   return (
     <Layout>
-      <Hero heroData ={heroData} />
-      <Marketing  marketing = {marketing} />
+      <Hero  />
+      <Marketing  frontend = {frontend} backend = {backend} />
+      <OurCustomers customerReview ={customer}  />
+      <BookCall />
     </Layout>
   );
 }
 
-
-export async function getServerSideProps() {
-	// Define the URLs for the APIs you want to fetch
-	const urls = [
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/about-hero?populate=*`,
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/marketings?populate=*`,
-	];
-  
-	// Use Promise.all to fetch all APIs concurrently
-	const responses = await Promise.all(urls.map(url => fetch(url)));
-	
-	// Convert the responses to JSON
-	const data = await Promise.all(responses.map(res => res.json()));
-
-	return {
-	  props: {
-		heroData: data[0].data,
-    marketing : data[1].data 
-	  },
-	};
-  }

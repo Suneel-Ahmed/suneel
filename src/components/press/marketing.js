@@ -1,11 +1,11 @@
+"use client"
 
 import "react-step-progress-bar/styles.css";
-import { ProgressBar , Step } from "react-step-progress-bar";
-
-
-
-export default function Marketing({marketing}) {
- 
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { useState } from "react";
+export default function Marketing({frontend , backend}) {
+ const [field , setField] = useState("frontend")
   return (
     <section
       id="marketing"
@@ -23,37 +23,53 @@ export default function Marketing({marketing}) {
          
           
          
+      <div className="w-full flex pr-24 gap-[30px] justify-center" >
+        <button onClick={()=>setField('frontend')} className="text-[2rem] px-20 py-2 border border-white hover:bg-white/10  rounded-[30px]" >FrontEnd</button>
+        <button onClick={()=>setField('backend')} className="text-[2rem] px-20 py-2 border border-white rounded-[30px] hover:bg-white/10 " >Backend</button>
+        
+      </div>
+          {
+            field === "frontend" && (
+
             
-              <div
-                
-                className={`pt-[4vw] absolute inset-0  grid grid-cols-2 gap-y-[50px] max-md:grid-cols-1  gap-[30px] `}
-              >
-                {marketing.map((item, idx) => (
-              <div key={item.title_English + idx} className=" flex justify-center flex-col items-center" >
-              <p className="relative  text-outlined text-transparent  text-[clamp(30px,3.75vw,50px)] text-center lg:text-left font-inter font-extrabold leading-[125%] uppercase ">
-             
-              {item?.title_English}
-        </p>
-                  
-                
-                <p className="w-full py-[30px] max-w-none lg:max-w-[clamp(0px,45vw,850px)] relative text-[#000] text-[clamp(14px,1.55vw,29px)] text-center lg:text-left font-poppins font-normal leading-[150%]">
-                <ProgressBar
-                
-  percent={98}
-  filledBackground="#efdcf9"
-  unfilledBackground="#000000"
-  height={20}
- 
-  text = {"98%"}
->
-</ProgressBar>
-                </p>
+            <div className="w-full  gap-[30px] gap-y-[130px] mt-48 place-items-center grid grid-cols-4" >
+           {
+            frontend.map((val)=>(
+
+            
+              <div key={val.id} className=" text-black w-full gap-[18px] flex flex-col items-center" >
+                <div className="w-[40%]" >
+                <CircularProgressbar  value={val.value} text={`${val.value}%`} />              
+
+                </div>
+                <h1 className="text-white text-center text-[2rem] " >{val.title_English}</h1>
               </div>
-            ))}  
+           ))
+          }
+            </div>
+            )
+          }  
+           {
+            field === "backend" && (
+
+            
+            <div className="w-full  gap-[30px] gap-y-[130px] mt-48 place-items-center grid grid-cols-4" >
+           {
+            backend.map((val)=>(
+
+            
+              <div key={val.id} className=" text-black w-full gap-[18px] flex flex-col items-center" >
+                <div className="w-[40%]" >
+                <CircularProgressbar  value={val.value} text={`${val.value}%`} />              
+
+                </div>
+                <h1 className="text-white text-center text-[2rem] " >{val.title_English}</h1>
               </div>
-            
-            
-          
+           ))
+          }
+            </div>
+            )
+          }  
      
         </div>
         
