@@ -38,7 +38,7 @@ export default function Marketing({frontend , backend}) {
 
             
               <div key={val.id} className=" text-black w-full gap-[18px] flex flex-col items-center" >
-                <div className="w-[40%] max-sm:w-[30%]" >
+                <div className="w-[40%] max-sm:w-[50%]" >
                 <CircularProgressbar  value={val.value} text={`${val.value}%`} />              
 
                 </div>
@@ -59,7 +59,7 @@ export default function Marketing({frontend , backend}) {
 
             
               <div key={val.id} className=" text-black w-full gap-[18px] flex flex-col items-center" >
-                <div className="w-[40%]  max-sm:w-[30%] " >
+                <div className="w-[40%]  max-sm:w-[50%] " >
                 <CircularProgressbar  value={val.value} text={`${val.value}%`} />              
 
                 </div>
