@@ -3,32 +3,32 @@ export default {
 		{
 			title: 'Nexus Agency',
 			text: "Transform your digital presence From establishing credibility to generating leads, we’ve got you covered.",
-			image: '/images/outdoor-advertising/1.png',
+			image: '/images/outdoor-advertising/1.PNG',
 			link : "https://nexus-frontend-puce.vercel.app/"
 		},
 		{
 			title: 'M-LIGHT',
 			text: 'We are an engineering-led lighting supply specialist, bringing concept ideas to reality using the latest advances in products and technology. We are a team that believes in creating lighting solutions that are not only aesthetically pleasing but also functional.',
-			image: '/images/outdoor-advertising/2.png',
+			image: '/images/outdoor-advertising/2.PNG',
 			link : "https://e-commerce-taupe-ten-57.vercel.app/"
 		},
 		{
 			title: 'Boze Coin',
 			text: 'Boze Coin is a revenue-sharing project powered by a Telegram-based bot. It’s like Aladdin and the wonderful lamp of Telegram—Boze and its incredible community!',
-			image: '/images/outdoor-advertising/3.png',
+			image: '/images/outdoor-advertising/3.PNG',
 			link : "https://bozecoin.vercel.app/"
 			
 		},
 		{
 			title: 'Alphalogix Agency',
 			text: 'Empowering Innovation transforming lives',
-			image: '/images/outdoor-advertising/4.png',
+			image: '/images/outdoor-advertising/4.PNG',
 			link : "https://company-rust.vercel.app/"
 		},
 		{
 			title: 'Alexandre Cartillier',
 			text: 'Dédié à donner vie à vos projets avec passion et précision. Optez pour mon expertise pour un montage soigné, impactant et de qualité. Ensemble nous donnerons à vos projets la finition qu’ils méritent.',
-			image: '/images/outdoor-advertising/5.png',
+			image: '/images/outdoor-advertising/5.PNG',
 			link : "https://gabrielportfelio.vercel.app/"
 		},
 	],
