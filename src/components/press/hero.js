@@ -15,7 +15,7 @@ export default function Hero() {
 </div>
 
       </div>
-      <div className="flex flex-col place-items-center lg:place-items-start gap-[50px]">
+      <div className="flex flex-col max-sm:order-2 place-items-center lg:place-items-start gap-[50px]">
         <span>
           <p className="relative text-[#efdcf9] text-[clamp(14px,1.8vw,34px)] text-center lg:text-left font-inter font-extrabold leading-[275%] uppercase  ">
              About us
@@ -40,7 +40,7 @@ pixel-perfect designs, I can create stunning custom websites that create to your
           { "Book a Call"}
         </Button>
       </div>
-      <div className="w-[75vw] max-w-[500px]  lg:max-w-none lg:w-[35.5vw] aspect-[4/3] relative  overflow-hidden">
+      <div className="w-[75vw] max-sm:order-1 max-w-[500px]  lg:max-w-none lg:w-[35.5vw] aspect-[4/3] relative  overflow-hidden">
         <span className={`absolute   flex justify-center inset-0 `}>
 
           <Image

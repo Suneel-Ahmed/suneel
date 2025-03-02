@@ -23,26 +23,26 @@ export default function Marketing({frontend , backend}) {
          
           
          
-      <div className="w-full flex pr-24 gap-[30px] justify-center" >
-        <button onClick={()=>setField('frontend')} className="text-[2rem] px-20 py-2 border border-white hover:bg-white/10  rounded-[30px]" >FrontEnd</button>
-        <button onClick={()=>setField('backend')} className="text-[2rem] px-20 py-2 border border-white rounded-[30px] hover:bg-white/10 " >Backend</button>
+      <div className="w-full flex pr-24 gap-[30px] justify-center mx-auto max-sm:pr-0" >
+        <button onClick={()=>setField('frontend')} className="text-[2rem] max-sm:px-10 max-sm:text-[0.8rem] px-20 py-2 border border-white hover:bg-white/10  rounded-[30px]" >FrontEnd</button>
+        <button onClick={()=>setField('backend')} className="text-[2rem] max-sm:px-10 max-sm:text-[0.8rem] px-20 py-2 border border-white rounded-[30px] hover:bg-white/10 " >Backend</button>
         
       </div>
           {
             field === "frontend" && (
 
             
-            <div className="w-full  gap-[30px] gap-y-[130px] mt-48 place-items-center grid grid-cols-4" >
+            <div className="w-full  gap-[30px] gap-y-[130px] max-sm:gap-y-[50px] max-sm:mt-[50px] max-sm:grid-cols-2 mt-48 place-items-center grid grid-cols-4" >
            {
             frontend.map((val)=>(
 
             
               <div key={val.id} className=" text-black w-full gap-[18px] flex flex-col items-center" >
-                <div className="w-[40%]" >
+                <div className="w-[40%] max-sm:w-[30%]" >
                 <CircularProgressbar  value={val.value} text={`${val.value}%`} />              
 
                 </div>
-                <h1 className="text-white text-center text-[2rem] " >{val.title_English}</h1>
+                <h1 className="text-white text-center max-sm:text-[0.9rem] text-[2rem] " >{val.title_English}</h1>
               </div>
            ))
           }
@@ -53,17 +53,17 @@ export default function Marketing({frontend , backend}) {
             field === "backend" && (
 
             
-            <div className="w-full  gap-[30px] gap-y-[130px] mt-48 place-items-center grid grid-cols-4" >
+            <div className="w-full  gap-[30px] max-sm:grid-cols-2 max-sm:gap-y-[50px] max-sm:mt-[50px] gap-y-[130px] mt-48 place-items-center grid grid-cols-4" >
            {
             backend.map((val)=>(
 
             
               <div key={val.id} className=" text-black w-full gap-[18px] flex flex-col items-center" >
-                <div className="w-[40%]" >
+                <div className="w-[40%]  max-sm:w-[30%] " >
                 <CircularProgressbar  value={val.value} text={`${val.value}%`} />              
 
                 </div>
-                <h1 className="text-white text-center text-[2rem] " >{val.title_English}</h1>
+                <h1 className="text-white text-center text-[2rem] max-sm:text-[0.9rem] " >{val.title_English}</h1>
               </div>
            ))
           }
