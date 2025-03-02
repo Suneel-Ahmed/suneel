@@ -6,11 +6,11 @@ import Hero from '@/components/outdoor-advertising/hero';
 import useAssetsLoader from '@/hooks/useAssetsLoader';
 import useDocumentTitle from '@/hooks/useDocumentTitle';
 
-// import outdoorAdvertisingData from '@/constants/outdoor-advertising-data';
 
-export default function OutdoorAdvertising({outdoorAdvertisingData}) {
 
-	useDocumentTitle('Outdoor Advertising');
+export default function OutdoorAdvertising() {
+
+	useDocumentTitle('Projects');
 	const { areImagesLoaded, areFontsLoaded, areVideosLoaded } = useAssetsLoader(
 		[],
 		[
@@ -77,25 +77,7 @@ export default function OutdoorAdvertising({outdoorAdvertisingData}) {
 
 	return (
 		<Layout>
-			<Hero outdoorAdvertisingData = {outdoorAdvertisingData} />
+			<Hero  />
 		</Layout>
 	);
 }
-export async function getServerSideProps() {
-	// Define the URLs for the APIs you want to fetch
-	const urls = [
-	  `${process.env.NEXT_PUBLIC_BACKEND_API}/case-studies?populate=*`,
-	];
-  
-	// Use Promise.all to fetch all APIs concurrently
-	const responses = await Promise.all(urls.map(url => fetch(url)));
-	
-	// Convert the responses to JSON
-	const data = await Promise.all(responses.map(res => res.json()));
-   
-	return {
-	  props: {
-		outdoorAdvertisingData: data[0].data,
-	  },
-	};
-  }

@@ -27,7 +27,7 @@ export default function OurServices({services_Data}) {
             .filter((service) => !service.exclude)
             .slice(0, 8)
             .map((service, idx) => (
-              <div className='cursor-pointer hover:bg-white/20 pb-[20px]  rounded-3xl '>
+              <div key={idx} className='cursor-pointer hover:bg-white/20 pb-[20px]  rounded-3xl '>
                 <li key={service + idx}>
                   <span className="w-[clamp(0px,35vw,250px)] lg:w-[clamp(0px,20vw,310px)] relative block rounded-3xl overflow-hidden">
                   

@@ -20,7 +20,7 @@ export default {
 		},
         {
 			name: 'Projects',
-			path: '/case-studies',
+			path: '/projects',
 		},
 	
 		

@@ -2,11 +2,12 @@ import Image from 'next/image';
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import outdoorAdvertisingData from '@/constants/outdoor-advertising-data';
+import Link from 'next/link';
 
 
-
-
-export default function Hero({outdoorAdvertisingData}) {
+export default function Hero() {
+	const outdoorAdvertisingDatas = outdoorAdvertisingData.data;
 	const containerRef = useRef(null);
 	const backgroundImagesRef = useRef(null);
 	const textsRef = useRef(null);
@@ -19,7 +20,7 @@ export default function Hero({outdoorAdvertisingData}) {
 		let newSlide = currentSlide + (direction === 'forward' ? 1 : -1);
 		newSlide = Math.max(
 			0,
-			Math.min(newSlide, outdoorAdvertisingData.length - 1)
+			Math.min(newSlide, outdoorAdvertisingDatas.length - 1)
 		);
 		setCurrentSlide(newSlide);
 
@@ -41,14 +42,14 @@ export default function Hero({outdoorAdvertisingData}) {
 			scrollTrigger: {
 				trigger: containerRef.current,
 				start: 'top top',
-				end: `+=${window.innerHeight * outdoorAdvertisingData.length * (window.innerWidth >= 1024 ? 1.5 : 0.4)}`, // Reduced scroll length
+				end: `+=${window.innerHeight * outdoorAdvertisingDatas.length * (window.innerWidth >= 1024 ? 1.5 : 0.4)}`, // Reduced scroll length
 				scrub: 0.8, // Faster scrub
 				pin: true,
 				pinSpacing: true,
 			},
 		});
 	
-		for (let i = 1; i < outdoorAdvertisingData.length; i++) {
+		for (let i = 1; i < outdoorAdvertisingDatas.length; i++) {
 			tl.to(
 				backgroundImages[i - 1],
 				{
@@ -101,15 +102,15 @@ export default function Hero({outdoorAdvertisingData}) {
 				.to(
 					lineRef.current,
 					{
-						scaleX: (i + 1) / outdoorAdvertisingData.length,
+						scaleX: (i + 1) / outdoorAdvertisingDatas.length,
 						ease: 'power2.inOut', // Faster easing
 						duration: 0.5, // Reduced duration
 						onComplete: () => {
 							const slide = Math.round(
-								tl.progress() * outdoorAdvertisingData.length
+								tl.progress() * outdoorAdvertisingDatas.length
 							);
 							setCurrentSlide(
-								slide < outdoorAdvertisingData.length - 1
+								slide < outdoorAdvertisingDatas.length - 1
 									? slide
 									: slide - 1
 							);
@@ -137,10 +138,10 @@ export default function Hero({outdoorAdvertisingData}) {
 			className='w-full h-screen pl-[8vw] pr-[4vw] lg:pt-[12vw] relative flex flex-col lg:flex-row place-content-start lg:place-content-between place-items-start lg:place-items-center'
 		>
 			<div ref={backgroundImagesRef} className='w-full h-full absolute inset-0'>
-				{outdoorAdvertisingData.map((item, idx) => (
+				{outdoorAdvertisingDatas?.map((item, idx) => (
 					<Image
 						key={idx}
-						src={`https://api.programantum.com${item?.attributes?.image?.data?.attributes?.url}`}
+						src={item?.image}
 						alt={"case studies images"}
 						fill
 						sizes='100vw'
@@ -157,20 +158,20 @@ export default function Hero({outdoorAdvertisingData}) {
 				className='w-full lg:w-1/2 h-[55%] lg:min-h-[600px] relative'
 			>
 				 <>
-				{outdoorAdvertisingData.map((item, idx) => (
+				{outdoorAdvertisingDatas?.map((item, idx) => (
 					<div
 						key={idx}
 						className={`absolute top-1/2 lg:top-0 -translate-y-1/2 lg:translate-y-0 flex flex-col place-items-center lg:place-items-start gap-[30px] ${
 							idx === 0 ? '' : 'invisible'
 						}`}
 					>
-						<p className='lg:max-w-[35vw] relative text-[#DBE600] text-[clamp(45px,4.2vw,80px)] text-center lg:text-left font-inter font-extrabold leading-[100%] uppercase '>
-							{item?.attributes?.Title_English}
+						<p className='lg:max-w-[35vw] relative text-[#efdcf9] text-[clamp(45px,4.2vw,80px)] text-center lg:text-left font-inter font-extrabold leading-[100%] uppercase '>
+							{item?.title}
 						</p>
 						<p className='lg:max-w-[23vw] relative text-[#FFFFFFCC] text-[clamp(14px,0.95vw,18px)] text-center lg:text-left font-inter font-normal leading-[125%]'>
-						{item?.attributes?.text_English}
+						{item?.text}
 						</p>
-						<button className='px-8 py-2 border border-white rounded-3xl' >Check The Site</button>
+						<Link href = {item.link} target='_blank' className='px-8 py-2 border border-white rounded-3xl' >Check The Site</Link>
 
 					</div>
 				))}	
@@ -183,14 +184,14 @@ export default function Hero({outdoorAdvertisingData}) {
 						ref={imagesRef}
 						className='w-fit h-fit flex gap-[50px] -translate-x-[calc(60vw+50px)] lg:-translate-x-[calc(16.2vw+50px)]'
 					>
-						{outdoorAdvertisingData.map((item, idx) => (
+						{outdoorAdvertisingDatas.map((item, idx) => (
 							<div
 								key={idx}
-								className='w-[60vw] lg:w-[16.2vw] h-[65vw] lg:h-[22.4vw] relative border-[3px] border-[#DBE600] rounded-[1.6vh] lg:rounded-[1.2vw] overflow-hidden'
+								className='w-[60vw] lg:w-[16.2vw] h-[65vw] lg:h-[22.4vw] relative border-[3px] border-[#efdcf9] rounded-[1.6vh] lg:rounded-[1.2vw] overflow-hidden'
 							>
 								<Image
 									key={idx}
-									src={`https://api.programantum.com${item?.attributes?.image?.data?.attributes?.url}`}
+									src={item?.image}
 									alt={"case studies images"}
 									fill
 									sizes='100vw'
@@ -215,7 +216,7 @@ export default function Hero({outdoorAdvertisingData}) {
 									width='73'
 									height='75'
 									rx='36.5'
-									fill='#DBE600'
+									fill='#efdcf9'
 									fillOpacity='0.04'
 									shapeRendering='crispEdges'
 								/>
@@ -358,7 +359,7 @@ export default function Hero({outdoorAdvertisingData}) {
 									width='73'
 									height='75'
 									rx='36.5'
-									fill='#D9D9D9'
+									fill='#efdcf9'
 									fillOpacity='0.04'
 									shapeRendering='crispEdges'
 								/>
@@ -491,7 +492,7 @@ export default function Hero({outdoorAdvertisingData}) {
 					<div className='h-[2px] ml-[50px] -translate-y-[6px] relative flex-grow bg-[#FFFFFF4D]'>
 						<div
 							ref={lineRef}
-							className={`w-full h-full absolute inset-0 origin-left scale-x-[calc(1/5)] bg-[#DBE600]`}
+							className={`w-full h-full absolute inset-0 origin-left scale-x-[calc(1/5)] bg-[#efdcf9]`}
 						/>
 					</div>
 				</div>

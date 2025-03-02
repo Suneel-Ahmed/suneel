@@ -1,29 +1,35 @@
 export default {
 	data: [
 		{
-			title: 'Establish Social Proof',
-			text: "Boost your brand's credibility and visibility in the real world. Our outdoor advertising strategies are designed to showcase your success and reliability, creating a strong impression of social proof that attracts and reassures potential customers.",
-			image: '/images/outdoor-advertising/outdoor-advertising-01.jpg',
+			title: 'Nexus Agency',
+			text: "Transform your digital presence From establishing credibility to generating leads, we’ve got you covered.",
+			image: '/images/outdoor-advertising/1.png',
+			link : "https://nexus-frontend-puce.vercel.app/"
 		},
 		{
-			title: 'Expand Your Reach',
-			text: 'Widen your audience significantly with strategic outdoor ads. By placing your message in high-traffic areas, we ensure your brand catches the eyes of diverse groups, multiplying your visibility and enhancing brand recognition.',
-			image: '/images/outdoor-advertising/outdoor-advertising-02.jpg',
+			title: 'M-LIGHT',
+			text: 'We are an engineering-led lighting supply specialist, bringing concept ideas to reality using the latest advances in products and technology. We are a team that believes in creating lighting solutions that are not only aesthetically pleasing but also functional.',
+			image: '/images/outdoor-advertising/2.png',
+			link : "https://e-commerce-taupe-ten-57.vercel.app/"
 		},
 		{
-			title: 'Highly Targeted Advertising',
-			text: 'Maximize the impact of your campaigns with precision-targeted outdoor advertising. We identify and utilize prime locations that your key demographic frequents, ensuring your message resonates with the right audience at the right time.',
-			image: '/images/outdoor-advertising/outdoor-advertising-03.jpg',
+			title: 'Boze Coin',
+			text: 'Boze Coin is a revenue-sharing project powered by a Telegram-based bot. It’s like Aladdin and the wonderful lamp of Telegram—Boze and its incredible community!',
+			image: '/images/outdoor-advertising/3.png',
+			link : "https://bozecoin.vercel.app/"
+			
 		},
 		{
-			title: 'Continuous Exposure',
-			text: 'Gain round-the-clock visibility with outdoor ads. Unlike fleeting digital ads, our outdoor advertising solutions provide continuous exposure, keeping your brand in the public eye 24/7 and building long-term brand awareness.',
-			image: '/images/outdoor-advertising/outdoor-advertising-04.jpg',
+			title: 'Alphalogix Agency',
+			text: 'Empowering Innovation transforming lives',
+			image: '/images/outdoor-advertising/4.png',
+			link : "https://company-rust.vercel.app/"
 		},
 		{
-			title: 'Creative Flexibility',
-			text: 'Let your creativity soar with the versatile nature of outdoor advertising. From billboards to bus wraps, we offer a range of formats that allow for bold, innovative designs, making your brand stand out and capturing the imagination of passersby.',
-			image: '/images/outdoor-advertising/outdoor-advertising-03.jpg',
+			title: 'Alexandre Cartillier',
+			text: 'Dédié à donner vie à vos projets avec passion et précision. Optez pour mon expertise pour un montage soigné, impactant et de qualité. Ensemble nous donnerons à vos projets la finition qu’ils méritent.',
+			image: '/images/outdoor-advertising/5.png',
+			link : "https://gabrielportfelio.vercel.app/"
 		},
 	],
 };
