@@ -141,7 +141,7 @@ export default function Hero() {
 				{outdoorAdvertisingDatas?.map((item, idx) => (
 					<Image
 						key={idx}
-						src={item?.image}
+						src={item.image}
 						alt={"case studies images"}
 						fill
 						sizes='100vw'
@@ -191,7 +191,7 @@ export default function Hero() {
 							>
 								<Image
 									key={idx}
-									src={item?.image}
+									src={item.image}
 									alt={"case studies images"}
 									fill
 									sizes='100vw'
