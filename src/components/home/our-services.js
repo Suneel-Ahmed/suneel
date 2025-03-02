@@ -18,7 +18,7 @@ export default function OurServices({services_Data}) {
             "text-[#efdcf9] text-[clamp(48px,6vw,110px)] text-center font-leagueSpartan font-semibold leading-[100%] uppercase "
           }
         >
-          {"Services"}
+          {"Services "}
         </p>
         {
           
