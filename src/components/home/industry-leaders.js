@@ -40,7 +40,7 @@ export default function IndustryLeaders({ industryLeaders }) {
 		<section
 			ref={containerRef}
 			id='industry-leaders'
-			className='w-full h-fit relative'
+			className='w-full max-sm:mt-[100px] h-fit relative'
 		>
 			<p className=' text-[clamp(28px,4.3vw,82px)] text-center font-leagueSpartan font-semibold leading-[125%] text-[#efdcf9]'>
 			 { "TRUSTED BY INDUSTRY LEADERS"}	

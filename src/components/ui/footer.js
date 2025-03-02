@@ -46,7 +46,7 @@ export default function Footer() {
 			</div>
 			<div className='w-full  lg:w-[42.5%] relative flex flex-col gap-[clamp(30px,5vw,100px)]'>
 				{/* <Logo className='w-[192px] lg:w-[clamp(0px,20vw,384px)]' /> */}
-				<a href="/" className="font-hvdTrialGraphit text-[120px]" >
+				<a href="/" className="font-hvdTrialGraphit text-[clamp(50px,3.2vw,120px)]" >
            SUNEEL
           </a>
 			

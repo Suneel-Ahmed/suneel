@@ -11,7 +11,7 @@ export default function OurServices({services_Data}) {
 
       <div
       id="our-services"
-        className="w-full min-h-screen lg:pt-[16vh] inset-0 origin-top-right flex flex-col place-content-center place-items-center lg:place-content-start gap-[30px]"
+        className="w-full min-h-screen max-sm:pb-[100px] lg:pt-[16vh] inset-0 origin-top-right flex flex-col place-content-center place-items-center lg:place-content-start gap-[30px]"
       >
         <p
           className={
@@ -29,7 +29,7 @@ export default function OurServices({services_Data}) {
             .map((service, idx) => (
               <div className='cursor-pointer hover:bg-white/20 pb-[20px]  rounded-3xl '>
                 <li key={service + idx}>
-                  <span className="w-[clamp(0px,35vw,250px)] lg:w-[clamp(0px,20vw,310px)] aspect-video relative block rounded-3xl overflow-hidden">
+                  <span className="w-[clamp(0px,35vw,250px)] lg:w-[clamp(0px,20vw,310px)] relative block rounded-3xl overflow-hidden">
                   
                       <Image
                         src={service?.attributes?.coverimage}
@@ -38,7 +38,7 @@ export default function OurServices({services_Data}) {
                         width={500}
                         height={500}
                         // sizes="22vw"
-                        className="object-center aspect-square w-[150px] mx-auto mt-5 h-auto "
+                        className="object-center aspect-square w-[150px]  max-sm:w-auto mx-auto mt-5 h-auto "
                       />
                    
                   </span>
