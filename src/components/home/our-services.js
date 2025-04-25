@@ -22,7 +22,7 @@ export default function OurServices({services_Data}) {
         </p>
         {
           
-        <ul className="w-fit grid grid-rows-2 lg:grid-rows-2 grid-cols-2 lg:grid-cols-4 mt-[10vh] place-content-center place-items-center gap-[clamp(0px,4vw,25px)]">
+        <ul className="w-fit grid grid-rows-2 lg:grid-rows-2 grid-cols-2 lg:grid-cols-4  mt-[10vh] place-content-center place-items-center gap-[clamp(0px,2vw,25px)]">
           {services_Data
             .filter((service) => !service.exclude)
             .slice(0, 8)
