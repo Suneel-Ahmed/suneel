@@ -74,8 +74,8 @@ export default function Marketing({frontend , backend}) {
               <ProgressBar completed={item.value1} />
               </div>
               <div className="mb-4" >
-              <h1 className="mb-2" >{item.subHeading2}</h1>
-              <ProgressBar completed={item.value2} />
+             {item.subHeading2 && (<h1 className="mb-2" >{item.subHeading2}</h1>)} 
+             {item.value2 && (<ProgressBar completed={item.value2} />)} 
               </div>
               
             </div>   

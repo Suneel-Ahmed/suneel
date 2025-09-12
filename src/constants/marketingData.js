@@ -6,6 +6,14 @@ const img5 = "/images/marketing/5.png"
 const img6 = "/images/marketing/6.png"
 const img7 = "/images/marketing/7.png"
 const img8 = "/images/marketing/8.png"
+const backendImg1 = "/images/marketing/backendImg/1.png"
+const backendImg2 = "/images/marketing/backendImg/2.png"
+const backendImg3 = "/images/marketing/backendImg/3.png"
+const backendImg4 = "/images/marketing/backendImg/4.png"
+const backendImg5 = "/images/marketing/backendImg/5.png"
+const backendImg6 = "/images/marketing/backendImg/6.png"
+const backendImg7 = "/images/marketing/backendImg/7.png"
+
 export const frontend = [
   {
     id: 1,
@@ -90,47 +98,70 @@ export const frontend = [
     {
       id: 1,
       title_English : "Node.js / Express.js",
-      value : 99            
+      subHeading1: "Node.js",
+      subHeading2: "Express.js",
+      value1 : 88,            
+      value2 : 98,
+      img : backendImg1            
           
       
     },
       {
           id: 2,
           title_English : "Laravel / SQL",
-          value : 99          
+          subHeading1: "Laravel",
+          subHeading2: "PHP",
+          value1 : 80,            
+          value2 : 75,
+          img : backendImg2           
               
           
         },
       {
           id: 3,
           title_English : "AWS / Firebase",
-          value : 99          
+          subHeading1: "AWS",
+          subHeading2: "Firebase",
+          value1 : 75,            
+          value2 : 90,
+          img : backendImg3           
         },
       {
           id: 4,
           title_English : "GraphQl",
-          value : 85       
+          subHeading1: "GraphQl",
+          subHeading2: "Strapi",
+          value1 : 80,            
+          value2 : 95,
+          img : backendImg4       
         },
       {
           id: 5,
           title_English : "Postgress SQL",
-          value : 99    
+          subHeading1: "Postgress SQL",
+           subHeading2: "SQL",
+          value1 : 90,            
+          value2 : 80,            
+          img : backendImg5    
         },
       {
           id: 6,
           title_English : "Mongoose / MongoDB",
-          value : 90    
+          subHeading1: "Mongoose",
+          subHeading2: "MongoDB",
+          value1 : 90,            
+          value2 : 98,
+          img : backendImg6     
         },
       {
           id: 7,
           title_English : "Prisma / Clerk",
-          value : 97    
-        },
-      {
-          id: 8,
-          title_English : "SQL",
-          value : 97    
-        },
+          subHeading1: "Prisma",
+          subHeading2: "Clerk",
+          value1 : 80,            
+          value2 : 88,
+          img : backendImg7   
+        }
     
       
     
