@@ -2,7 +2,6 @@ import Layout from '@/layout/layout';
 
 import Loader from '@/components/ui/loader';
 import Hero from '@/components/home/hero';
-import IndustryLeaders from '@/components/home/industry-leaders';
 import OurServices from '@/components/home/our-services';
 
 import OurCustomers from '@/components/home/our-customers';
@@ -88,7 +87,7 @@ export default function Home() {
 			<Hero  />
 			<OurCustomers customerReview ={customer}  />
 			<OurServices  services_Data = {services_Data} />
-			<IndustryLeaders industryLeaders={industryLeaderData} />
+		
 			
 			<CTA Cta_Data = {Cta_Data} />
 			

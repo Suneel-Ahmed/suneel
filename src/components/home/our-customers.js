@@ -140,7 +140,7 @@ export default function OurCustomers({ customerReview, alt = false }) {
         className="mb-[60vh]  relative lg:mb-0  text-[clamp(50px,10vw,192px)] text-center font-leagueSpartan font-semibold leading-[100%] uppercase text-[#efdcf9]"
       >
         <>
-          Our customers
+          customers
           <br />
           speak for us
         </>

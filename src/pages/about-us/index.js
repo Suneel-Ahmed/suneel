@@ -4,9 +4,7 @@ import Layout from "@/layout/layout";
 
 import Loader from "@/components/ui/loader";
 import Hero from "@/components/press/hero";
-import OurCustomers from "@/components/home/our-customers";
 import Marketing from "@/components/press/marketing";
-import { customer } from '@/constants/customer';
 
 import useAssetsLoader from "@/hooks/useAssetsLoader";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
@@ -88,7 +86,6 @@ export default function Press({ }) {
     <Layout>
       <Hero  />
       <Marketing  frontend = {frontend} backend = {backend} />
-      <OurCustomers customerReview ={customer}  />
       <BookCall />
     </Layout>
   );
