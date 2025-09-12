@@ -25,10 +25,13 @@ export default function Marketing({frontend , backend}) {
        
       </div>
       <div className="w-full flex justify-center  gap-5" >
-    <button className = "bg-white/10 hover:bg-white font-bold hover:text-black rounded-md px-10 py-2 cursor-pointer" onClick={()=>{}}>Frontend</button>
-    <button className="bg-white/10 hover:bg-white font-bold hover:text-black rounded-md px-10 py-2 cursor-pointer " onClick={()=>{}} >Backend</button>
+    <button className = "bg-white/10 text-xl hover:bg-white font-bold hover:text-black rounded-md px-10 py-2 cursor-pointer" onClick={()=>setField('frontend')}>Frontend</button>
+    <button className="bg-white/10 text-xl hover:bg-white font-bold hover:text-black rounded-md px-10 py-2 cursor-pointer " onClick={()=>setField('backend')} >Backend</button>
       </div>
-    <div className="w-full  flex flex-wrap justify-center gap-[30px] p-[100px] min-h-[50vh]" >
+
+    {
+      field === "frontend" && (
+ <div className="w-full  flex flex-wrap justify-center gap-[30px] p-[100px] min-h-[50vh]" >
       {
         frontend.map((item , index) => (
 <div className="w-[400px] h-[500px] bg-white/5 hover:bg-white/10 flex flex-col py-[30px] px-[10px] items-center justify-center rounded-[20px] backdrop-blur-sm" >
@@ -53,6 +56,38 @@ export default function Marketing({frontend , backend}) {
       }
       
     </div>
+      )
+    }
+ {
+      field === "backend" && (
+ <div className="w-full  flex flex-wrap justify-center gap-[30px] p-[100px] min-h-[50vh]" >
+      {
+        backend.map((item , index) => (
+<div className="w-[400px] h-[500px] bg-white/5 hover:bg-white/10 flex flex-col py-[30px] px-[10px] items-center justify-center rounded-[20px] backdrop-blur-sm" >
+               
+           <div className="w-full min-h-[320px] " >
+            <Image className = "w-full h-full object-contain object-center" src={item.img} width = {500} height = {500} alt = "Skill Logo" />
+            </div>
+          <div className="w-full min-h-[30px]  mt-auto mb-[30px]" >
+              <div className="mb-4" >
+              <h1 className="mb-2" >{item.subHeading1}</h1>
+              <ProgressBar completed={item.value1} />
+              </div>
+              <div className="mb-4" >
+              <h1 className="mb-2" >{item.subHeading2}</h1>
+              <ProgressBar completed={item.value2} />
+              </div>
+              
+            </div>   
+      </div>
+
+        ))
+      }
+      
+    </div>
+      )
+    }
+   
     </section>
   );
 }

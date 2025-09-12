@@ -28,13 +28,10 @@ export default function Hero() {
           </p>
         </span>
         <p className="relative w-full lg:max-w-[clamp(0px,46vw,934px)] text-[#efdcf9ce] text-[clamp(14px,1.55vw,29px)] text-center lg:text-left font-poppins font-normal leading-[150%]">
-        𝘊𝘳𝘢𝘧𝘵𝘪𝘯𝘨 𝘤𝘰𝘥𝘦 𝘸𝘪𝘵𝘩 𝘤𝘳𝘦𝘢𝘵𝘪𝘷𝘪𝘵𝘺 𝘢𝘯𝘥 𝘱𝘳𝘦𝘤𝘪𝘴𝘪𝘰𝘯, 𝘐 𝘣𝘳𝘪𝘯𝘨 𝘥𝘪𝘨𝘪𝘵𝘢𝘭 𝘥𝘳𝘦𝘢𝘮𝘴 𝘵𝘰 𝘭𝘪𝘧𝘦 𝘵𝘩𝘳𝘰𝘶𝘨𝘩 𝑭𝒖𝒍𝒍𝑺𝒕𝒂𝒄𝒌 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝘮𝘢𝘴𝘵𝘦𝘳𝘺. <br/>
-🅵🆄🅻🅻 🆂🆃🅰🅲🅺 🅳🅴🆅🅴🅻🅾🅿🅴🆁
-<br/>
-Look no further! I am a skilled and experienced in 𝗙𝗿𝗼𝗻𝘁𝗲𝗻𝗱 | 𝗯𝗮𝗰𝗸𝗲𝗻𝗱 and fullstack web 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 with 𝗠𝗘𝗥𝗡 𝘀𝘁𝗮𝗰𝗸 | 𝑭𝒖𝒍𝒍𝑺𝒕𝒂𝒄𝒌 𝘄𝗲𝗯 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 ,
- proficient in a wide range of technologies. 
-
-pixel-perfect designs, I can create stunning custom websites that create to your specific needs
+      I’m a <strong> Full-Stack Web Developer </strong> specializing in the <strong> MERN stack </strong>. Skilled in both <strong> frontend </strong> and <strong> backend development</strong>, I create responsive, user-friendly, and high-performance websites. With a focus on pixel-perfect design and clean code, I turn ideas into powerful digital solutions.
+        <br/>
+        
+       Book A Call to discuss your project and see how I can help bring your vision to life.
         </p>
         <Button link="/book-a-call" className="w-fit h-[clamp(36px,4vw,64px)]">
           { "Book a Call"}
