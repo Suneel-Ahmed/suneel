@@ -37,7 +37,7 @@ export default function Hero() {
 	useGSAP(() => {
 		const backgroundImages = Array.from(backgroundImagesRef.current.children);
 		const texts = Array.from(textsRef.current.children);
-	
+
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: containerRef.current,
@@ -48,7 +48,7 @@ export default function Hero() {
 				pinSpacing: true,
 			},
 		});
-	
+
 		for (let i = 1; i < outdoorAdvertisingDatas.length; i++) {
 			tl.to(
 				backgroundImages[i - 1],
@@ -123,13 +123,13 @@ export default function Hero() {
 					duration: 0.3, // Reduced fade duration
 				});
 		}
-	
+
 		tl.to(containerRef.current, {
 			autoAlpha: 0,
 			duration: 0.3, // Reduced fade out duration
 		});
 	}, { scope: containerRef });
-	
+
 
 	return (
 		<section
@@ -145,9 +145,8 @@ export default function Hero() {
 						alt={"case studies images"}
 						fill
 						sizes='100vw'
-						className={`object-cover object-center ${
-							idx === 0 ? '' : 'invisible'
-						}`}
+						className={`object-cover object-center ${idx === 0 ? '' : 'invisible'
+							}`}
 						priority
 					/>
 				))}
@@ -157,26 +156,32 @@ export default function Hero() {
 				ref={textsRef}
 				className='w-full lg:w-1/2 h-[55%] lg:min-h-[600px] relative'
 			>
-				 <>
-				{outdoorAdvertisingDatas?.map((item, idx) => (
-					<div
-						key={idx}
-						className={`absolute top-1/2 lg:top-0 -translate-y-1/2 lg:translate-y-0 flex flex-col place-items-center lg:place-items-start gap-[30px] ${
-							idx === 0 ? '' : 'invisible'
-						}`}
-					>
-						<p className='lg:max-w-[35vw] relative text-[#efdcf9] text-[clamp(45px,4.2vw,80px)] text-center lg:text-left font-inter font-extrabold leading-[100%] uppercase '>
-							{item?.title}
-						</p>
-						<p className='lg:max-w-[23vw] relative text-[#FFFFFFCC] text-[clamp(14px,0.95vw,18px)] text-center lg:text-left font-inter font-normal leading-[125%]'>
-						{item?.text}
-						</p>
-						<Link href = {item.link} target='_blank' className='px-8 py-2 border border-white rounded-3xl' >Check The Site</Link>
+				<>
+					{outdoorAdvertisingDatas?.map((item, idx) => (
+						<div
+							key={idx}
+							className={`absolute top-1/2 lg:top-0 -translate-y-1/2 lg:translate-y-0 flex flex-col place-items-center lg:place-items-start gap-[30px] ${idx === 0 ? '' : 'invisible'
+								}`}
+						>
+							<p className='lg:max-w-[35vw] relative text-[#efdcf9] text-[clamp(45px,4.2vw,80px)] text-center lg:text-left font-inter font-extrabold leading-[100%] uppercase '>
+								{item?.title}
+							</p>
+							<p className='lg:max-w-[23vw] relative text-[#FFFFFFCC] text-[clamp(14px,0.95vw,18px)] text-center lg:text-left font-inter font-normal leading-[125%]'>
+								{item?.text}
+							</p>
+							<div className='flex flex-wrap justify-center lg:justify-start gap-2 lg:max-w-[25vw]'>
+								{item?.techStack?.map((tech, techIdx) => (
+									<span key={techIdx} className='px-3 py-1 border border-white/30 rounded-full text-white/80 text-xs sm:text-sm font-light'>
+										{tech}
+									</span>
+								))}
+							</div>
+							<Link href={item.link} target='_blank' className='px-8 py-2 border border-white rounded-3xl' >Check The Site</Link>
 
-					</div>
-				))}	
-					</> 
-				
+						</div>
+					))}
+				</>
+
 			</div>
 			<div className='w-full lg:w-1/2 lg:h-[55%] lg:min-h-[600px] relative flex flex-col place-content-between gap-[75px]'>
 				<div className='w-fit relative overflow-hidden'>
@@ -200,7 +205,7 @@ export default function Hero() {
 								/>
 							</div>
 						))}
-			</div>
+					</div>
 				</div>
 				<div className='w-full relative flex place-content-start place-items-center'>
 					<button onClick={() => handleScroll('backward')}>
