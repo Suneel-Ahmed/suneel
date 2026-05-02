@@ -17,7 +17,7 @@ export default {
 		{
 			title: 'VaultAura',
 			text: "VaultAura accompagne les entreprises dans leur transformation numérique grâce à des solutions modernes, efficaces et parfaitement adaptées à leurs besoins.",
-			image: '/images/outdoor-advertising/6.PNG',
+			image: '/images/outdoor-advertising/6.png',
 			link: "https://company-portfelio.vercel.app/",
 			techStack: ["Next.js", "React.js", "Tailwind CSS", "Strapi", "CRM"]
 		},
