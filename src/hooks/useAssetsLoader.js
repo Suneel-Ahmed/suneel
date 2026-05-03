@@ -1,18 +1,29 @@
 "use client"
 import { useEffect, useState } from 'react';
 
+// Maximum time (ms) to wait for assets before rendering anyway.
+// Prevents 504 timeouts on cold starts when fonts/images aren't cached.
+const ASSETS_TIMEOUT_MS = 3000;
+
 function useAssetsLoader(images = [], fonts = [], videos = []) {
 	const [areImagesLoaded, setImagesLoaded] = useState(false);
 	const [areFontsLoaded, setFontsLoaded] = useState(false);
 	const [areVideosLoaded, setVideosLoaded] = useState(false);
 
 	useEffect(() => {
+		// Helper: resolves whichever comes first — the promise or the timeout
+		const withTimeout = (promise) =>
+			Promise.race([
+				promise,
+				new Promise((resolve) => setTimeout(resolve, ASSETS_TIMEOUT_MS)),
+			]);
+
 		// Load images
 		if (images.length) {
 			const imagePromises = images.map((imageSrc) => {
 				const img = new Image();
 				img.src = imageSrc;
-				return img.decode();
+				return withTimeout(img.decode().catch(() => {}));
 			});
 
 			Promise.all(imagePromises).then(() => {
@@ -25,7 +36,7 @@ function useAssetsLoader(images = [], fonts = [], videos = []) {
 		// Load fonts
 		if (fonts.length) {
 			const fontPromises = fonts.map((fontSpec) =>
-				document.fonts.load(fontSpec)
+				withTimeout(document.fonts.load(fontSpec).catch(() => {}))
 			);
 
 			Promise.all(fontPromises).then(() => {
@@ -38,19 +49,13 @@ function useAssetsLoader(images = [], fonts = [], videos = []) {
 		// Load videos
 		if (videos.length) {
 			const videoPromises = videos.map((videoSrc) => {
-				return new Promise((resolve) => {
+				const videoPromise = new Promise((resolve) => {
 					const video = document.createElement('video');
 					video.src = videoSrc;
-
-					video.onloadeddata = () => {
-						resolve();
-					};
-
-					// Error handling if needed
-					video.onerror = () => {
-						resolve(); // or reject, depending on how you want to handle errors
-					};
+					video.onloadeddata = resolve;
+					video.onerror = resolve;
 				});
+				return withTimeout(videoPromise);
 			});
 
 			Promise.all(videoPromises).then(() => {
@@ -59,7 +64,7 @@ function useAssetsLoader(images = [], fonts = [], videos = []) {
 		} else {
 			setVideosLoaded(true);
 		}
-	}, [images, fonts, videos]);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return { areImagesLoaded, areFontsLoaded, areVideosLoaded };
 }

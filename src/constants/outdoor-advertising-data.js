@@ -30,21 +30,48 @@ export default {
 			techStack: ["Next.js", "React.js", "GSAP", "Three.js", "Tailwind CSS", "Strapi", "CRM"]
 		},
 		{
-			title: 'M-LIGHT',
-			text: 'We are an engineering-led lighting supply specialist, bringing concept ideas to reality using the latest advances in products and technology. We are a team that believes in creating lighting solutions that are not only aesthetically pleasing but also functional.',
-			image: '/images/outdoor-advertising/2.PNG',
-			link: "https://e-commerce-taupe-ten-57.vercel.app/",
-			techStack: ["Next.js", "React.js", "GSAP", "Three.js", "Tailwind CSS", "Strapi", "CRM"]
+			title: 'PDF & IMAGE TO TEXT',
+			text: 'PDF & Image to Text: Converts scanned documents and images into editable, searchable text using OCR technology.',
+			image: '/images/outdoor-advertising/pdf-to-text.png',
+			link: "https://pdftotextconverter.vercel.app/",
+			techStack: ["Next.js", "React.js", "Vercel"]
 		},
-
 		{
-			title: 'Boze Coin',
-			text: 'Boze Coin is a revenue-sharing project powered by a Telegram-based bot. It’s like Aladdin and the wonderful lamp of Telegram—Boze and its incredible community!',
-			image: '/images/outdoor-advertising/3.PNG',
-			link: "https://bozecoin.vercel.app/",
-			techStack: ["Next.js", "React.js", "GSAP", "Telegram Bot", "Telegram Mini App", "Laravel", "MySQL", "Tailwind CSS", "Admin Dashboard"]
-
+			title: 'AI Engineering & Geospatial Integration',
+			text: 'AI Engineering & Geospatial Integration: Developed an AI-powered system integrating historical traffic and accident data with Google Maps to analyze patterns and enhance road safety insights.',
+			image: '/images/outdoor-advertising/ai-geo.png',
+			link: "https://surus-guvenji-new.vercel.app/",
+			techStack: ["Next.js", "React.js", "Vercel", "Runway", "Google Maps API", "OpenAI API", "Recharts", "Tailwind CSS"]
 		},
+		{
+			title: 'Precise Personnel',
+			text: 'We connect skilled workers with the right light industrial roles — fast, reliable, and built around the way your business actually runs.',
+			image: '/images/outdoor-advertising/workforce.png',
+			link: "https://precise-personnel.vercel.app/",
+			techStack: ["Next.js", "React.js", "Vercel"]
+		},
+		{
+			title: 'FireWorks Tiktok Live',
+			text: 'FireWorks TikTok Live: Built a real-time interactive app synced with TikTok Live where virtual gifts trigger dynamic fireworks animations based on gift type and value.',
+			image: '/images/outdoor-advertising/tiktok-live.png',
+			link: "https://test-fireworks.vercel.app/",
+			techStack: ["Next.js", "React.js", "Tiktok Live API", "Vercel"]
+		},
+		{
+			title: 'Next.JS SASS APP with n8n Workflow Automation',
+			text: 'Next.js SaaS App with n8n Workflow Automation: Built a scalable SaaS platform using Next.js integrated with n8n to automate processes and streamline data workflows.',
+			image: '/images/outdoor-advertising/N8N.png',
+			link: "https://n8n-sass.vercel.app/",
+			techStack: ["Next.js", "React.js", "N8N", "Vercel"]
+		},
+		{
+			title: 'DuoData',
+			text: 'Duodata bridges the gap between business and IT, enabling large enterprises to unify their metrics through AI-powered discovery, deployment, anddocumentation',
+			image: '/images/outdoor-advertising/duodata.png',
+			link: "https://duodata.vercel.app/",
+			techStack: ["Next.js", "React.js", "Landing Page", "Vercel"]
+		},
+
 		{
 			title: 'Alyan Portfolio',
 			text: "Creating intuitive digital experiences that blend beautiful design with seamless functionality.",
